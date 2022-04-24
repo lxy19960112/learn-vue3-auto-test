@@ -1,5 +1,3 @@
-import { test, expect, it } from 'vitest'
-
 test('happy path', () => {
     expect(true).toBe(true);
 })

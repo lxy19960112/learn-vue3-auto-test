@@ -1,5 +1,3 @@
-import { it, expect, assert, describe } from 'vitest';
-
 //expect 创建断言 not否定断言
 it('test', () => {
   expect(8).not.toBe(2) // jest API

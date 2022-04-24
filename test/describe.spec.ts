@@ -1,5 +1,3 @@
-import { describe, it, expect, assert } from 'vitest';
-
 const person = {
   isActive: true,
   age: 32
