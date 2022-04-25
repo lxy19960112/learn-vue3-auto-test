@@ -12,7 +12,10 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     reporters: 'dot',
-    setupFiles: [resolve(__dirname, 'src/__test__/setup.ts')],
+    setupFiles: [resolve(__dirname, 'src/__tests__/setup.ts')],
   },
-  plugins: [vue()]
+  plugins: [vue()],
+  server: {
+    port: 9999
+  }
 })
