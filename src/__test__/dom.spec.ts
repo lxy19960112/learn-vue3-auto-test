@@ -1,9 +1,16 @@
-// describe('dom test', () => {
-//   it.concurrent('testing-dom', async () => {
-    
-//   })
-// })
+describe('dom test', () => {
+  it.concurrent('testing-dom', () => {
+    const div = document.createElement('div');
+    div.id = 'testing-dom';
+    expect(div).toBeDefined()
+    expect(div).toBeTypeOf('object')
+    expect(div).toBeInstanceOf(HTMLDivElement)
 
-it('happy path', () => {
-  expect(true).toBe(true)
+    document.body.appendChild(div);
+    const mask: HTMLDivElement = document.getElementById('testing-dom');
+    expect(mask).toBeInTheDocument()
+
+    div.remove()
+    expect(mask).not.toBeInTheDocument()
+  })
 })
